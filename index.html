@@ -7,19 +7,21 @@
         <!-- JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
+        <title>J.G. Development</title>
+
         <style>
 
           body {
-            background-color: #212121;;
-            color: orange;
+            background-color: #212121;
+            color: #ffa500;
           }
 
           .icon-grid, header {
-            border-bottom: 5px solid orange;
+            border-bottom: 5px solid #ffa500;
           }
 
           footer {
-            border-top: 5px solid orange;
+            border-top: 5px solid #ffa500;
           }
 
           .container-img {
@@ -29,7 +31,7 @@
 
 
           .nav-pills :nth-child(1) .active {
-            background-color: orange;
+            background-color: #ffa500;
             color: #212121;
           }
 
@@ -37,8 +39,12 @@
             color: orange;
           }
 
+          .nav-link:hover {
+            color: rgb(202, 131, 0);
+          }
+
           .logo {
-            background-color: orange;
+            background-color: #ffa500;
             color: #212121;
             font-size: 1.5rem;
             border-radius: 8px;
@@ -48,7 +54,7 @@
 
           .btn-primary {
             color: #212121;
-            background-color: orange;
+            background-color: #ffa500;
             border-style: none;
           }
 
@@ -59,6 +65,12 @@
           .btn-primary:hover {
             color: #212121;
             background-color: rgb(202, 131, 0);
+          }
+
+          .btn-primary:focus {
+            color: #212121;
+            background-color: orange;
+            box-shadow: 0 0 5px orange;
           }
 
           .btn-outline-secondary:hover {
@@ -129,8 +141,36 @@
             }
           }
 
+          .gear {
+            animation: rotate 3.5s;
+            animation-delay: 2s;
+          }
+
+          @keyframes rotate {
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+
+          .form-control {
+            border: #ffa500 solid 3px;
+            background-color: #212121;
+          }
+          
+          .form-control:focus {
+            color: white;
+            background-color: #212121;
+            border: #ffa500 solid 3px;
+            box-shadow: 0 0 5px orange;
+          }
+
+          .contact {
+            display: flex;
+            flex-direction: column;
+          }
+
           svg * {
-            fill: orange;
+            fill: #ffa500;
           }
 
         </style>
@@ -223,7 +263,8 @@
         <div class="container-img container">
           <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-              <span class="logo">JGadgiev</span>
+              <img src="Logo.svg" style="margin-top: -10px; margin-bottom: -10px;" alt="JG Logo" width="64">
+              <span style="color: orange; margin-left: 10px; font-weight: bold;">Develop Efficiently.</span>
             </a>
       
             <ul class="nav nav-pills">
@@ -241,10 +282,10 @@
         <div class="container col-xxl-8 px-4 py-5">
           <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
-              <img src="laptop icon.png" class="d-block mx-lg-auto img-fluid" alt="Laptop Icon" width="700" height="500" loading="lazy">
+              <img src="Logo.svg" class="d-block mx-lg-auto img-fluid gear" alt="JG Logo" width="700" height="500" loading="lazy">
             </div>
             <div class="col-lg-6">
-              <div class="display-5 fw-bold lh-1 mb-3">
+              <div class="display-5 fw-bold lh-1 mb-3" style="cursor: default;">
                 <span class="letters first-letters">N</span>
                 <span class="letters">e</span>
                 <span class="letters">e</span>
@@ -256,75 +297,61 @@
                 <span class="letters">?</span>
                 <h1 class="final-letters display-5 fw-bold lh-1 mb-3">No problem!</h1>
               </div>
-              <p class="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+              <p class="lead">Design the web application of your dreams with J.G. Development! I craft spectacular web pages through the use of CSS, then nourish them with interactivity using JavaScript and its libraries including JQuery and ReactJS. I believe that efficiency is the first step in achieving your goals.</p>
               <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Learn More</button>
               </div>
             </div>
           </div>
         </div>
         <!-- Your code here... -->
 
+        <div class='container contact col-xxl-8 px-4 py-5' style="margin-top: -80px;">
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" style="max-width: 500px;">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2" style="max-width: 150px; margin-top: 10px;">Get Started</button>
+        </div>
+
         <!-- Features -->
-        <div class="container px-4 py-5" id="icon-grid">
-          <h2 class="pb-2 icon-grid">Icon grid</h2>
+        <div class="container px-4 py-5" id="custom-cards">
+          <h2 class="pb-2 icon-grid">Courses Taken</h2>
       
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-            <div class="col d-flex align-items-start">
-              <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"></use></svg>
-              <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
+          <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+            <div class="col">
+              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('Astrolabs.png');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Astrolabs</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <img src="https://astrolabs.com/wp-content/uploads/2016/12/logo-sm.svg" alt="Bootstrap" width="32" height="32">
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="col d-flex align-items-start">
-              <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"></use></svg>
-              <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
+      
+            <div class="col">
+              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('FreeCodeCamp-page.png');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">FreeCodeCamp</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <img src="freecodecamp.png" alt="Bootstrap" width="32" height="32">
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="col d-flex align-items-start">
-              <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#calendar3"></use></svg>
-              <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
-              </div>
-            </div>
-            <div class="col d-flex align-items-start">
-              <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"></use></svg>
-              <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
-              </div>
-            </div>
-            <div class="col d-flex align-items-start">
-              <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#speedometer2"></use></svg>
-              <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
-              </div>
-            </div>
-            <div class="col d-flex align-items-start">
-              <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#toggles2"></use></svg>
-              <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
-              </div>
-            </div>
-            <div class="col d-flex align-items-start">
-              <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#geo-fill"></use></svg>
-              <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
-              </div>
-            </div>
-            <div class="col d-flex align-items-start">
-              <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#tools"></use></svg>
-              <div>
-                <h3 class="fw-bold mb-0 fs-4">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading.</p>
+      
+            <div class="col">
+              <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('CodeWars.png');">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Codewars</h3>
+                  <ul class="d-flex list-unstyled mt-auto">
+                    <li class="me-auto">
+                      <img src="https://www.codewars.com/packs/assets/logo.61192cf7.svg" alt="Bootstrap" width="32" height="32">
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -336,7 +363,7 @@
           <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
             <div class="col-md-4 d-flex align-items-center">
               <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+                <img src="Logo.svg" style="margin-top: -10px; margin-bottom: -10px;" alt="JG Logo" width="64">
               </a>
               <span class="mb-3 mb-md-0">© 2022 Company, Inc</span>
             </div>
